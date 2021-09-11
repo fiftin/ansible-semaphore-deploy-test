@@ -1,5 +1,5 @@
-[deploy]
+[website]
 192.168.0.172
 
-[build]
+[builder]
 127.0.0.1
