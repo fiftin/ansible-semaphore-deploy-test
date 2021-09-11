@@ -1,0 +1,12 @@
+- name: get artifacts
+  pause:
+    seconds: 1
+
+- name: create configs
+  pause:
+    seconds: 1
+
+- name: copy artifacts and configs to destination servers
+  copy:
+    src: "{{ role_path }}/files/test.txt"
+    dest: "{{ ansible_env.HOME }}/test.txt"
