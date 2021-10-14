@@ -1,12 +1,12 @@
-- name: get artifacts
+- name: get source code
   pause:
     seconds: 1
 
-- name: create configs
+- name: build version {{ semaphore_version }}
   pause:
     seconds: 1
 
-- name: copy artifacts and configs to destination servers
+- name: copy artifacts to storage:w
   copy:
     src: "{{ role_path }}/files/test.txt"
     dest: "{{ ansible_env.HOME }}/test-{{ semaphore_version }}.txt"
