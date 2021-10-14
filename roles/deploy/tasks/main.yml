@@ -6,7 +6,7 @@
   pause:
     seconds: 1
 
-- name: copy {{ semaphore_task_version }} artifacts and configs to destination servers
+- name: copy --- {{ semaphore_task_version }} artifacts and configs to destination servers
   copy:
     src: "{{ role_path }}/files/test.txt"
     dest: "{{ ansible_env.HOME }}/test-{{ semaphore_task_version }}.txt"
