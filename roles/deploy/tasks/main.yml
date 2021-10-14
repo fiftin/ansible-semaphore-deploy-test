@@ -9,5 +9,5 @@
 - name: copy artifacts and configs to destination servers
   copy:
     src: "{{ role_path }}/files/test.txt"
-    dest: "{{ ansible_env.HOME }}/test-{{ semaphore_version }}.txt"
+    dest: "{{ ansible_env.HOME }}/test-{{ semaphore_task_version }}.txt"
   become: True      
