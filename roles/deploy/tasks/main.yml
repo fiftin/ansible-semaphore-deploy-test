@@ -10,3 +10,4 @@
   copy:
     src: "{{ role_path }}/files/test.txt"
     dest: "{{ ansible_env.HOME }}/test-{{ semaphore_version }}.txt"
+  become: True      
