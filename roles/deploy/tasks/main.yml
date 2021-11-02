@@ -2,6 +2,10 @@
   pause:
     seconds: 1
 
+- name: PWD
+  debug:
+    msg: "{{ lookup('env', 'PWD') }}"
+
 - name: create configs
   pause:
     seconds: 1
