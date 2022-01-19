@@ -2,11 +2,11 @@
   pause:
     seconds: 1
 
-- name: PWD
+- name: print semaphore variables
   debug:
-    msg: "{{ lookup('env', 'PWD') }}"
+    msg: "{{ semaphore_vars }}"
 
-- name: build version {{ semaphore_task_version }}
+- name: build target
   pause:
     seconds: 1
 
