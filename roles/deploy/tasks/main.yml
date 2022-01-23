@@ -2,16 +2,17 @@
   pause:
     seconds: 1
 
-- name: PWD
+- name: print semaphore variables
   debug:
-    msg: "{{ lookup('env', 'PWD') }}"
+    msg: "{{ semaphore_vars }}"
 
 - name: create configs
   pause:
     seconds: 1
 
-- name: copy --- {{ semaphore_task_version }} artifacts and configs to destination servers
-  copy:
-    src: "{{ role_path }}/files/test.txt"
-    dest: "{{ ansible_env.HOME }}/test-{{ semaphore_task_version }}.txt"
-  become: True      
+- name: copy version {{ semaphore_vars.task_details.incoming_version }} of artifact to destination servers
+  template:
+    src: "{{ role_path }}/templates/app.sh"
+    dest: "{{ ansible_env.HOME }}/app-{{ semaphore_vars.task_details.incoming_version }}.sh"
+    mode: a+x
+  become: True

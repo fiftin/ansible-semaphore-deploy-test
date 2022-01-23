@@ -2,14 +2,18 @@
   pause:
     seconds: 1
 
-- name: PWD
+- name: print user_var
   debug:
-    msg: "{{ lookup('env', 'PWD') }}"
+    msg: "{{ user_var }}"
 
-- name: build version {{ semaphore_task_version }}
+- name: print semaphore_vars
+  debug:
+    msg: "{{ semaphore_vars }}"
+
+- name: build version {{ semaphore_vars.task_details.target_version }} of app
   pause:
     seconds: 1
 
-- name: copy artifacts to storage
+- name: copy app to storage
   pause:
     seconds: 1
