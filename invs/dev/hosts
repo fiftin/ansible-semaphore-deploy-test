@@ -1,5 +1,2 @@
 [website]
-192.168.0.172
-
-[builder]
-snowdenvpn.com
+127.0.0.1 ansible_connection=local
