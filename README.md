@@ -1,3 +1,3 @@
 # ansible-semaphore-deploy-test
 
-Test6
+Test7
