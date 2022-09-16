@@ -31,7 +31,7 @@
 
 - name: Include secret vars
   include_vars:
-    file: "{{ inventory_dir }}/../secrets.yml"
+    file: "{{ playbook_dir }}/invs/secrets.yml"
     name: secrets
 
 - name: Copy app to S3 storage
