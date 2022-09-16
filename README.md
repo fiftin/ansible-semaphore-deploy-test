@@ -1,3 +1,3 @@
-# ansible-semaphore-deploy-test
+# Demo Playbook
 
-Test7
+Simple Ansible playbook to demonstrate how Ansible Semaphore works.
