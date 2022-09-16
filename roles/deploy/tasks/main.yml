@@ -3,7 +3,7 @@
     src: https://builds.demo.ansible-semaphore.com/{{ semaphore_vars.task_details.incoming_version }}.tar.gz
     dest: "{{ dest_path }}"
     remote_src: True
-  become: True
+    
 
 - name: Print version
   debug:
