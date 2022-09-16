@@ -11,7 +11,7 @@
 
 - name: Print Test Var value
   debug:
-    msg: "{{ test_var }}"
+    msg: "{{ test_var|default('Undefined') }}"
 
 - name: Build app
   lineinfile:
