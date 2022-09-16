@@ -28,6 +28,11 @@
     value: "{{ semaphore_vars.task_details.target_version }}"
 
 
+- name: Emulate long process
+  ansible.builtin.pause:
+    minutes: 20
+
+
 - name: Create build directory
   file:
     path: /tmp/demo-app-build-{{ semaphore_vars.task_details.target_version }}
