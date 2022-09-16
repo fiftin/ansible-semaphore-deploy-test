@@ -27,7 +27,7 @@
 - name: Create build archive
   archive:
     path: /tmp/demo-app-src/*
-    dest: /tmp/build-v{{ semaphore_vars.task_details.target_versio }}.tar.gz
+    dest: /tmp/build-v{{ semaphore_vars.task_details.target_version }}.tar.gz
 
 - name: Copy app to S3 storage
   community.aws.s3_sync:
