@@ -16,7 +16,6 @@
 - name: Build app
   lineinfile:
     path: /tmp/demo-app-src/index.html
-    backrefs: yes
     search_string: "{{ item.tpl }}"
     line: "{{ item.value }}"
   with_items:
