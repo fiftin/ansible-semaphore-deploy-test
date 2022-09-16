@@ -26,6 +26,7 @@
     value: "{{ semaphore_vars.task_details.target_version }}"
     
 - name: Create build archive
+  archive:
     path: /tmp/demo-app-src/*
     dest: /tmp/build-v{{ semaphore_vars.task_details.target_versio }}.tar.gz
 
