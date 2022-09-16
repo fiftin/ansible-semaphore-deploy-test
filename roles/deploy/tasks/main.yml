@@ -1,9 +1,9 @@
 - name: Download and extract files
   unarchive:
-    src: https://builds.demo.ansible-semaphore.com/{{ semaphore_vars.task_details.incoming_version }}.tar.gz
+    src: https://demo-builds.ansible-semaphore.com/{{ semaphore_vars.task_details.incoming_version }}.tar.gz
     dest: "{{ dest_path }}"
     remote_src: True
-    
+
 
 - name: Print version
   debug:
