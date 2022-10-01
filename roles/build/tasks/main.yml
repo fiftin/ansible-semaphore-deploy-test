@@ -17,7 +17,7 @@
 
 
 - name: Build app
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /tmp/demo-app-src/index.html
     search_string: "{{ item.tpl }}"
     line: "{{ item.value }}"
