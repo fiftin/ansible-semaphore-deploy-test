@@ -1,3 +1,8 @@
+- hosts: local
+  gather_facts: False
+  roles:
+  - deps
+
 - hosts: builder
   roles:
   - build
