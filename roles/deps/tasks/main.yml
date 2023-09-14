@@ -1,3 +1,5 @@
 - name: Install deps
   pip:
     name: boto3
+    virtualenv: venv
+    virtualenv_site_packages: yes
